@@ -1,10 +1,10 @@
 # Projekt-Dokumentation
 
-✍️ Ihr Nachname
+Elangeswaran
 
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
-|       | 0.0.1   | ✍️ Jedes Mal, wenn Sie an dem Projekt arbeiten, fügen Sie hier eine neue Zeile ein und beschreiben in *einem* Satz, was Sie erreicht haben. |
+|       | 0.0.1   | Ich habe mir erste Gedanken zum Projekt gemacht              |
 |       | 0.0.2   |                                                              |
 |       | 0.0.3   |                                                              |
 |       | 0.0.4   |                                                              |
@@ -14,46 +14,55 @@
 
 # 0 Ihr Projekt
 
-✍️ Beschreiben Sie Ihr Projekt in einem griffigen Satz.
+Es ist ein Glücksradspiel als Webapplikation. Hierbei kann der Spieler einen Einsatz an Geld hineintun und dann an einem Glücksrad drehen. Diese hat zwei Felder: ``Geldbetrag x`` und ``Bankrott``. 
+
+Falls es auf ``Geldbetrag x`` landet darf der Spieler einen Konsonanten raten oder ein Vokal Kaufen, um das Ratewort oder Rätsel-Phrase herauszufinden. Bei erfolg, erhält der Spieler den eingesetzten Betrag, je nach wie oft dieser vorkommt, gutgeschrieben. Falls man nichts erratet verliert man einen Lebenspunkt, welcher am Anfang bei 3 liegt. 
+
+Falls es auf ``Bankrott`` landet verliert der Spieler all sein Guthaben auf dem Konto und das Spiel wird neu gestartet. 
+
+Man kann jedoch auch bei jedem seiner Züge versuchen das Wort zu erraten, jedoch verliert man auch hier einen Lebenspunkt, falls man es falsch errät. Sobald alle Konsonanten erraten worden sind, wird der Spieler gezwungen Vokale zu kaufen oder das Rätselwort herauszufinden. 
+
+Als Motivation gibt es eine Highscore Liste mit den grössten Gewinnen.
 
 # 1 Analyse
 
 ✍️ Beschreiben Sie, auf welchem Tier Sie die dynamischen Elemente der Anwendung unterbringen möchten:
 
-* Tier 1 (Presentation): ...
-* Tier 2 (Webserver):
-* Tier 3 (Application Server):
-* Tier 4 (Dataserver):
+* Tier 1 (Presentation): Anzeigen des Highscores, Entgegennahme von Buchstaben
+* Tier 2 (Webserver): Organisiert das Speichern von Gewinne
+* Tier 3 (Application Server): Verbindung zur Datenbank, Prüfung auf fehleingaben
+* Tier 4 (Dataserver): Gewinne
 
 # 2 Technologie
 
-✍️ Beschreiben Sie für dieselben Tiers, welche Programmiersprache bzw. Technologie Sie verwenden möchten.
+* Tier 1 (Presentation): HTML/CSS
+* Tier 2 (Webserver): HTML/CSS, JavaScript
+* Tier 3 (Application Server): JavaScript
+* Tier 4 (Dataserver): mySQL
 
 # 3 Datenbank
 
-✍️ Wie steuern Sie Ihre Datenbank an? Wie ist das Interface aufgebaut? 
+Über eine Applikation der Datenbank
 
 # 4.1 User Stories
 
-✍️ Formulieren Sie klare Anforderungen in der Form von User Stories (*„als … möchte ich … damit …“*) und zu jeder Anforderung mindestens einen dazugehörigen Testfall (in Kapitel 4.2). 
 
-✍️ Formulieren Sie weitere, eigene Anforderungen und Testfälle, wie Sie Ihre Applikation erweitern möchten. Geben Sie diesen statt einer Nummer einen Buchstaben (`A`, `B`, etc.)
+| US-№ | Verbindlichkeit | Typ          | Beschreibung                       |
+| ---- | --------------- | ----         | ---------------------------------- |
+| 1    | Muss            | Funktional   | Als Spieler möchte ich am Glücksrad drehen können, damit ich spielen kann                   |
+| 2    | Muss            | Funktional   | Als Spieler möchte ich Konsonanten auswählen können, damit ich die Lösung herausfinden kann |
+| 3    | Muss            | Funktional   | Als Spieler möchte ich Wörter eingeben können, damit ich das Rätselwort herausfinden kann   |
 
-| US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
-| ---- | --------------- | ---- | ---------------------------------- |
-| 1    |                 |      | Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️ |
-| ...  |                 |      |                                    |
 
-✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc. oder Zahl), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). 
 
 # 4.2 Testfälle
 
-| TC-№ | Vorbereitung | Eingabe | Erwartete Ausgabe |
-| ---- | ------------ | ------- | ----------------- |
-| 1.1  |              |         |                   |
-| ...  |              |         |                   |
+| TC-№ | Vorbereitung         | Eingabe             | Erwartete Ausgabe                 |
+| ---- | ------------         | -------             | -----------------                 |
+| 1.1  | Programm läuft       | Drehen Knopf        | Glücksradausgabe                  |
+| 2.1  | Programm läuft       | Konsonant           | Passt oder nicht                  |
+| 3.1  | Programm läuft       | Wärter              | Passt oder nicht                  |
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
 # 5 Prototyp
 
