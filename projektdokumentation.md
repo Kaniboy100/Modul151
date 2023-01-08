@@ -26,8 +26,6 @@ Als Motivation gibt es eine Highscore Liste mit den grössten Gewinnen.
 
 # 1 Analyse
 
-✍️ Beschreiben Sie, auf welchem Tier Sie die dynamischen Elemente der Anwendung unterbringen möchten:
-
 * Tier 1 (Presentation): Anzeigen des Highscores, Entgegennahme von Buchstaben
 * Tier 2 (Webserver): Organisiert das Speichern von Gewinne
 * Tier 3 (Application Server): Verbindung zur Datenbank, Prüfung auf fehleingaben
